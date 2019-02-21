@@ -5,12 +5,14 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
+
+import java.util.Scanner;
 public class CaesarCipher {
     public String encrypt(String input, int key){
         // make a StringBuilder with message encrypted
         StringBuilder encrypted = new StringBuilder(input);
         //write down the alphabet
-        String alphabet = "ABCDEFGHIJKLMNOPQRTSTUVWXYZ";
+        String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         //compute the shifted alphabet
         String shiftedAlphabet = alphabet.substring(key) + alphabet.substring(0, key);
         //count from o to length of encrypted, call it i
@@ -30,5 +32,6 @@ public class CaesarCipher {
         }
         // the string inside the encrypted is the answer
         return encrypted.toString();
-    }
+    }  
+    
 }
