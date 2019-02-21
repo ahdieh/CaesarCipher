@@ -32,6 +32,15 @@ public class CaesarCipher {
         }
         // the string inside the encrypted is the answer
         return encrypted.toString();
-    }  
+    }
     
+    public void testCaesar(){
+        int key = 17;
+        System.out.print("Please enter a message for encryption: ");
+        Scanner message = new Scanner(System.in);
+        String encrypted = encrypt(message.nextLine(), key);
+        String decrypted = encrypt(encrypted, 26-key);        
+        System.out.println("the encrypted message is: " + encrypted);
+        System.out.println("the decrypted message is: " + decrypted);
+    }
 }
